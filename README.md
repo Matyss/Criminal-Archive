@@ -1,1 +1,1 @@
-This application was created with purpose to take first steps with using Node.js and MongoDB + learn Semantic UI framework. It containts a archive file of criminals. Users are able to add, edit and delete the entries. Enjoy!
+This application was created with purpose to take first steps with using Node.js and MongoDB + learn Semantic UI framework. It containts an archive file of criminals. Users are able to add, edit and delete the entries. Enjoy!
