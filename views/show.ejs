@@ -1,0 +1,27 @@
+<% include ./partials/header %>
+
+<div class='ui main text container'>
+    <div class='ui huge header'><%= archive.name %></div>
+    <div class='ui top attached segment'>
+        <div class='item'>
+            <img class='ui centered rounded image particular' src='<%= archive.photo %>'>
+            <div>
+                <div class='content'>
+                    <div class='meta'>
+                        <span><%= archive.created.toDateString() %></span>
+                    </div>
+                    <div class='ui clearing divider'></div>
+                    <div class='description'>
+                        <p><%- archive.body %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href='/criminals/<%= archive._id %>/edit' class='ui orange basic button'>Update Entry</a>
+        <form style='display: inline' action='/criminals/<%= archive._id %>?_method=DELETE' method='POST'>
+            <button class='ui red basic button' type='submit'>Delete Entry</button>
+        </form>
+    </div>
+</div>
+
+<% include ./partials/footer %>

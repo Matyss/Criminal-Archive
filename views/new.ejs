@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+
+<div class='ui main text container segment'>
+    <div class='ui huge header'>New Entry To Archive</div>
+    <form class='ui form' action="/criminals" method='POST'>
+        <div class='field'>
+            <label>Name</label>
+            <input type='text' name='archive[name]' placeholder='Name'>
+        </div>
+        <div class='field'>
+            <label>Photo of criminal</label>
+            <input type='text' name='archive[photo]' placeholder='Photo url'>
+        </div>
+        <div class='field'>
+            <label>Description</label>
+            <textarea name='archive[body]'></textarea>
+        </div>
+        <button class='ui big green basic button'>Add to database</button>
+    </form>
+</div>
+<% include ./partials/footer %>

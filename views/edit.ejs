@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+
+<div class='ui main text container segment'>
+    <div class='ui huge header'>Edit Entry</div>
+    <form class='ui form' action="/criminals/<%= archive._id %>?_method=PUT" method='POST'>
+        <div class='field'>
+            <label>Name</label>
+            <input type='text' name='archive[name]' value='<%= archive.name %>'>
+        </div>
+        <div class='field'>
+            <label>Photo of criminal</label>
+            <input type='text' name='archive[photo]' value='<%= archive.photo %>'>
+        </div>
+        <div class='field'>
+            <label>Description</label>
+            <textarea name='archive[body]'><%= archive.body %></textarea>
+        </div>
+        <button class='ui big orange basic button'>Update Entry</button>
+    </form>
+</div>
+
+<% include ./partials/footer %>

@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+
+<div class='ui main text container'>
+    <div class='ui huge header'>Criminal Files</div>
+    <div class='ui top attached segment'>
+        <div class='ui divided items'>
+            <% archives.forEach(function(archive){ %>
+            <div class='item'>
+                <div class='image'>
+                    <img src='<%= archive.photo %>'>
+                </div>
+                <div class='content'>
+                    <h2><%= archive.name %></h2>
+                    <div class='meta'>
+                        <span class='cinema'><%= archive.created.toDateString() %></span>
+                    </div>
+                    <div class='description'>
+                        <p><%- archive.body.substring(0, 200) + '..' %></p>
+                    </div>
+                    <div class='extra'>
+                        <a href='/criminals/<%= archive._id %>' class='ui blue right floated basic button'>
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>
